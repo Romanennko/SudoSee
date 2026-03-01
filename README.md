@@ -11,13 +11,26 @@ SudoSee is a fast, lightweight, and visually pleasing desktop application for tr
 - **Sleek Interface:** Modern, responsive dark-themed GUI powered by `egui`.
 - **Fast & Efficient:** Built with Rust, meaning low resource consumption and instant startup times.
 
-## Prerequisites
+## Download & Run
+
+The easiest way to use SudoSee is to download the pre-compiled executable:
+
+1. Go to the [Releases](https://github.com/Romanennko/SudoSee/releases) page.
+2. Download the latest `SudoSee-vX.X-Windows.zip`.
+3. Extract the folder anywhere on your computer.
+4. Double-click `SudoSee.exe` to run the application!
+
+*Note: SudoSee will automatically create a `data.json` file in the same folder to store your media collection locally.*
+
+---
+
+## Development & Building from Source
 
 To run and build SudoSee from source, you will need the Rust toolchain installed.
 
 1. Install Rust via [rustup](https://rustup.rs/).
 
-## Running the Application
+### Running the Application
 
 Clone the repository and run the application using `cargo`:
 
