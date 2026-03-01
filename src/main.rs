@@ -8,8 +8,22 @@ use app::SudoSeeApp;
 use eframe::egui;
 
 fn main() -> eframe::Result<()> {
+    // Embed the icon into the executable to load at runtime for the taskbar
+    let icon = include_bytes!("../icon.ico");
+    let image = image::load_from_memory(icon)
+        .expect("Failed to load icon")
+        .into_rgba8();
+    let (width, height) = image.dimensions();
+    let icon_data = eframe::egui::IconData {
+        rgba: image.into_raw(),
+        width,
+        height,
+    };
+
     let options = eframe::NativeOptions {
-        viewport: egui::ViewportBuilder::default().with_maximized(true),
+        viewport: egui::ViewportBuilder::default()
+            .with_maximized(true)
+            .with_icon(icon_data),
         ..Default::default()
     };
 
